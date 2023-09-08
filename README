@@ -1,0 +1,35 @@
+Project: Resolume Arena Content Triggering with Arduino and RFID
+Overview
+
+This project facilitates content triggering in Resolume Arena using an Arduino UNO, two MFRC522 RFID reader modules, and wooden cubes containing RFID tags. There are three cubes in total, each associated with specific English and Arabic content. When a cube is placed in one of the two wooden slots, the Arduino communicates with Resolume Arena via serial communication. The selected slot corresponds to either English or Arabic content, and the Arduino sends the appropriate character ('A' for English, 'D' for Arabic) at a baud rate of 9600. The LED strip surrounding each slot illuminates with a fade-in effect when a cube is placed in the corresponding slot, automatically turning off after 5 seconds (adjustable within the code).
+Hardware Components
+
+    Arduino UNO
+    Two MFRC522 RFID Reader Modules
+    Wooden Slots: For cube placement
+    Wooden Cubes: Each cube contains an RFID tag
+    Neopixel LED Strips (50 pixels): Surrounding each slot for visual feedback
+
+Usage
+
+    Connect the MFRC522 RFID readers, Neopixel LED strips, and Arduino UNO as per the wiring diagram.
+    Load the provided Arduino code onto your Arduino UNO.
+    Place a wooden cube in one of the slots.
+    The Arduino will detect the RFID tag, trigger the corresponding content in Resolume Arena, and activate the appropriate LED strip with a fade-in effect.
+    After 5 seconds, the LED strip will automatically fade out, indicating that the content is triggered.
+
+
+Dependencies
+
+    MFRC522 library for RFID functionality.
+    Adafruit Neopixel library for controlling the LED strips.
+
+
+Customization
+
+    You can adjust the fade-in and fade-out effects for the LED strips in the activateLED and deactivateLED functions.
+    Modify the code to support additional cubes and content mappings.
+
+Contributing
+
+Feel free to contribute to this project by opening issues or pull requests.
